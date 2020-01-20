@@ -1,6 +1,6 @@
 # MQTT Weather Dashboard 
 
-Dashboard to display environmental data from Weather Display MQTT Output - the code is editable for other MQTT feeds.
+Dashboard to display environmental data from Weather Display MQTT Output - the code is editable for other MQTT feeds. MQTT data is decoded into either direct numerical data to converted to text feeds for display on the page. The background colour changes every 5 degrees centigrade  based on the outdoor temperature feed.
 
 ![Screen](https://github.com/ucl-casa-ce/wd-mqtt-dashboard/blob/master/Screenshot%202020-01-20%20at%2011.49.16.png)
 
@@ -14,7 +14,7 @@ Weather Display (http://www.weather-display.com/index.php) with MQTT set to publ
 
 You should see the data coming into your MQTT feed. 
 
-Note - MQTT Box is a good option to check and monitor feeds (http://workswithweb.com/mqttbox.html).
+Note - MQTT Box is a useful option to check and monitor feeds (http://workswithweb.com/mqttbox.html).
 
 The dashboard uses Weather Icons - download from https://erikflowers.github.io/weather-icons/ and copy the folder to your web server.
 
@@ -28,6 +28,6 @@ var port=9001; //normally 9001
 Copy the file to your webserver mqttwd_dashboard.html 
 Copy dashboardmqtt.css to your css folder (most likely /css). Change the path accordingly to match your settings.
 
-Your page will update when any MQTT is received.
+Elements within the page will update when any MQTT is received.
 
 
