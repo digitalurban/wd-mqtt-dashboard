@@ -2,16 +2,32 @@
 
 Dashboard to display environmental data from Weather Display MQTT Output - the code is editable for other MQTT feeds.
 
-## Configuration
+![Screen](https://github.com/ucl-casa-ce/wd-mqtt-dashboard/blob/master/Screenshot%202020-01-20%20at%2011.49.16.png)
+
+The dashboard builds on the paho.mqtt.javascript file https://github.com/eclipse/paho.mqtt.javascript with the addition of decoding of the MQTT feed.
+
+## Requirements
 
 
+Requires an MQTT Broker - such as Mosquitto  - see https://obrienlabs.net/how-to-setup-your-own-mqtt-broker/ 
+Weather Display (http://www.weather-display.com/index.php) with MQTT set to publish (setup/advanced/LEDSignMQTT) - put in your broker details, tick send MQTT data - press 'test send'. 
+
+You should see the data coming into your MQTT feed. 
+
+Note - MQTT Box is a good option to check and monitor feeds (http://workswithweb.com/mqttbox.html).
+
+The dashboard uses Weather Icons - download from https://erikflowers.github.io/weather-icons/ and copy the folder to your web server.
+
+### Setting up files 
+
+Edit mqttwd_dashboard.html  to reflect you own MQTT broker details as per the comments
+
+var host="your mqtt broker"; //Add in your broker address
+var port=9001; //normally 9001
+
+Copy the file to your webserver mqttwd_dashboard.html 
+Copy dashboardmqtt.css to your css folder (most likely /css). Change the path accordingly to match your settings.
+
+Your page will update when any MQTT is received.
 
 
-### Setting up Passwords
-Copy and rename the file `.env.template` to `.env` and enter a value for the root mysql user as well as the MySQL username and password. These values will persit into the node application 
-so you don't need to edit these in the main webserver application. If you ever need to login into the MySQL server then use these credentitals. If you change the database value from shuttle
-then you will also have to edit the sql setup_db.sql file to match this new value. Better just leaving that the way it is.  
-
-### Generate Local SSL Certificates
-Run the following command on the terminal and copy the certificates into the ./data/certs folder. The docker image will mount this directory and expose this to the node server for running locally.  
-These certificates should be replaced with LetsEncrypt, or equivalent, certificates when running the server in production. 
