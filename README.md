@@ -10,6 +10,7 @@ The dashboard builds on the paho.mqtt.javascript file https://github.com/eclipse
 
 
 Requires an MQTT Broker - such as Mosquitto  - see https://obrienlabs.net/how-to-setup-your-own-mqtt-broker/ 
+
 Weather Display (http://www.weather-display.com/index.php) with MQTT set to publish (setup/advanced/LEDSignMQTT) - put in your broker details, tick send MQTT data - press 'test send'. 
 
 You should see the data coming into your MQTT feed. 
