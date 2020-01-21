@@ -26,6 +26,10 @@ Edit mqttwd_dashboard.html  to reflect you own MQTT broker details as per the co
 var host="your mqtt broker"; //Add in your broker address
 var port=9001; //normally 9001
 
+You also need to add in your topic name (ie wdwf/# )at:
+
+mqtt.subscribe("your topic name");
+
 Copy the file to your webserver mqttwd_dashboard.html 
 Copy dashboardmqtt.css to your css folder (most likely /css). Change the path accordingly to match your settings.
 
