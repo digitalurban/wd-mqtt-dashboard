@@ -1,6 +1,6 @@
 # MQTT Weather Dashboard 
 
-Dashboard to display environmental data from Weather Display MQTT Output - the code is editable for other MQTT feeds. MQTT data is decoded into either direct numerical data to converted to text feeds for display on the page. The background colour changes every 5 degrees centigrade  based on the outdoor temperature feed.
+Dashboard to display environmental data from Weather Display MQTT Output - the code is editable for other MQTT feeds. MQTT data is decoded into either direct numerical data to conver to text feeds for display on the page. The background colour changes every 5 degrees centigrade  based on the outdoor temperature feed.
 
 ![Screen](https://github.com/ucl-casa-ce/wd-mqtt-dashboard/blob/master/Screenshot%202020-01-20%20at%2011.49.16.png)
 
